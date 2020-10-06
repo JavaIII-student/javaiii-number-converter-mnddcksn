@@ -10,6 +10,11 @@ public class Hexadecimal {
 		
 		int quotient = dec;
 		int count =0;
+		// special case for 0 only
+		if (dec == 0) {
+			bin = "0";
+		}
+		
 		while (quotient != 0) {
 			quotient = quotient /2;
 			count ++;			

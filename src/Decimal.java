@@ -8,13 +8,17 @@ public class Decimal {
 		String bin = "";
 		int dec2 = Integer.parseInt(dec);
 		int quotient = dec2;
-		int count =0;
-			
+		int count = 0;
+		
+		// special case for 0 only
+		if (dec2 == 0) {
+			bin = "0";
+		}
+					
 		while (quotient != 0) {
 			
 			quotient = quotient /2;
-			count ++;
-						
+			count ++;						
 		}
 		
 		String [] binArray = new String[count];
@@ -39,6 +43,7 @@ public class Decimal {
 				binArray [i] = Integer.toString(remainder);
 				
 			}
+			
 		
 		}
 		
@@ -54,6 +59,11 @@ public class Decimal {
 	public static String convertToHexadecimal (String dec) {
 		String hex = "";
 		int dec2 = Integer.parseInt(dec);
+		
+		// special case for 0 only
+		if (dec2 == 0) {
+			hex = "0";
+		}
 		
 		
 		
@@ -79,8 +89,6 @@ public class Decimal {
 		}
 		
 	}
-		
 
-	
 
 }

@@ -61,8 +61,7 @@ public class NumberConverter implements ActionListener{
 		if (e.getSource() == binToDec) {
 			String binToDecString = JOptionPane.showInputDialog("Enter Binary Number to convert to Decimal");
 			//System.out.println(Binary.convertToDecimal(binToDecString));	
-			JOptionPane.showMessageDialog(null, Binary.convertToDecimal(binToDecString));
-			
+			JOptionPane.showMessageDialog(null, Binary.convertToDecimal(binToDecString));			
 		}
 		else if (e.getSource() == binToHex) {
 			String binToHexString = JOptionPane.showInputDialog( "Enter Binary Number to convert to Hexadecimal");

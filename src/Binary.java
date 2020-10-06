@@ -7,17 +7,20 @@ public class Binary {
 	public static String convertToHexadecimal (String bin) {
 		int dec = Integer.parseInt(convertToDecimal(bin));
 		String hex = "";
+		
+		// special case for 0 only
+		if (dec == 0) {
+			hex = "0";
+		}
+		
 		while (dec !=0) {
 			int hexVal = dec % 16;		
 			hex = toHexChar(hexVal) + hex;
 			dec = dec /16;
 		}
-		
-		
+				
 		return hex;
-		
 	}
-	
 	
 	private static char toHexChar (int hexVal) {
 		if (hexVal <= 9 && hexVal >=0) {
